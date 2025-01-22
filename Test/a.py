@@ -1,4 +1,4 @@
-# print("Greatest of three")
+print("Greatest of three")
 n1=float(input("enter a number"))
 n2=float(input("enter a number"))
 n3=float(input("enter a number"))
@@ -14,9 +14,9 @@ print("question 5")
 n=5
 def fibonocci(n):
     if n<=1:
-        return 1
+        return n
     return fibonocci(n-1)+fibonocci(n-2)
-print('0')
+# print('0')
 for i in range(1,n):
     print(fibonocci(i))
 
@@ -36,6 +36,36 @@ n=int(input('enter a number'))
 for i in  range(1,n+1):
     if n%i==0:
         print(i)
+
+
+print('Question 3')
+while True:
+    n = input('Enter 1-add, 2-sub, 3-mul, 4-div, or "exitCode" to exit: ')
+    if n == 'exitCode':
+        print("bye bye")
+        break 
+    if n.isdigit():  
+        n = int(n)
+        if n == 1:
+            n1 = float(input('Enter n1: '))
+            n2 = float(input('Enter n2: '))
+            print(n1 + n2, 'Sum')
+        elif n == 2:
+            n1 = float(input('Enter n1: '))
+            n2 = float(input('Enter n2: '))
+            print(n1 - n2, 'Difference')
+        elif n == 3:
+            n1 = float(input('Enter n1: '))
+            n2 = float(input('Enter n2: '))
+            print(n1 * n2, 'Product')
+        elif n == 4:
+            n1 = float(input('Enter n1: '))
+            n2 = float(input('Enter n2: '))
+            print(n1 / n2, 'Division')
+        else:
+            print('Enter a valid input 1-4 or exitCode')
+    else:
+        print('Enter a valid number')
 
 print('question 8')
 n=int(input('enter a number: '))
@@ -83,51 +113,31 @@ def factorial(n):
 print(factorial(fact)) 
 
 
-   
 print('question 11')
 n=int(input('enter a number'))
 count=0
 def CC(n):
+    global count
     if n==1:
-       return 
+       return 'end'
     if n%2==0:
       n1=n/2
+     
       n=n1
       count+=1
+      print(n)
       return CC(n)
     else:
      n2=3*n+1
      n=n2
      count+=1
+     print(n)
      return CC(n)
+    
 print(CC(n))
+print(count)
 
 
-print('Question 3')
-while True:
-    n = input('Enter 1-add, 2-sub, 3-mul, 4-div, or "exitCode" to exit: ')
-    if n == 'exitCode':
-        print("bye bye")
-        break 
-    if n.isdigit():  
-        n = int(n)
-        if n == 1:
-            n1 = float(input('Enter n1: '))
-            n2 = float(input('Enter n2: '))
-            print(n1 + n2, 'Sum')
-        elif n == 2:
-            n1 = float(input('Enter n1: '))
-            n2 = float(input('Enter n2: '))
-            print(n1 - n2, 'Difference')
-        elif n == 3:
-            n1 = float(input('Enter n1: '))
-            n2 = float(input('Enter n2: '))
-            print(n1 * n2, 'Product')
-        elif n == 4:
-            n1 = float(input('Enter n1: '))
-            n2 = float(input('Enter n2: '))
-            print(n1 / n2, 'Division')
-        else:
-            print('Enter a valid input 1-4 or exitCode')
-    else:
-        print('Enter a valid number')
+
+
+
