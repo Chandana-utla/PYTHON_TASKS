@@ -106,12 +106,10 @@ print(CC(n))
 print('Question 3')
 while True:
     n = input('Enter 1-add, 2-sub, 3-mul, 4-div, or "exitCode" to exit: ')
-    
     if n == 'exitCode':
         print("Exiting the program. Goodbye!")
         break 
-    n1=int(n)
-    while(n1!=0):  
+    if n.isdigit():  
         n = int(n)
         if n == 1:
             n1 = float(input('Enter n1: '))
@@ -130,6 +128,6 @@ while True:
             n2 = float(input('Enter n2: '))
             print(n1 / n2, 'Division')
         else:
-            print('Enter a valid input (1-4 or "exitCode").')
+            print('Enter a valid input 1-4 or exitCode')
     else:
         print('Enter a valid number')
