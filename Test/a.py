@@ -107,7 +107,7 @@ print('Question 3')
 while True:
     n = input('Enter 1-add, 2-sub, 3-mul, 4-div, or "exitCode" to exit: ')
     if n == 'exitCode':
-        print("Exiting the program. Goodbye!")
+        print("bye bye")
         break 
     if n.isdigit():  
         n = int(n)
